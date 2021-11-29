@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="icon" href="/wen/favicon.ico" />
+        <title>hello-world</title>
+        <link href="/wen/css/app.a14c9220.css" rel="stylesheet" />
+        <script>
+            // 设置 rem 函数
+            function setRem() {
+                // 375px iphone6 屏幕的大小; 375px = 20rem; 1rem = 18.75px
+                let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+                //得到html的Dom元素
+                let htmlDom = document.getElementsByTagName('html')[0];
+                //设置根元素字体大小
+                htmlDom.style.fontSize = (htmlWidth * 2) / 20 + 'px';
+            }
+            // 初始化
+            setRem();
+            // 改变窗口大小时重新设置 rem
+            window.onresize = function () {
+                setRem();
+            };
+        </script>
+    </head>
+    <body>
+        <noscript>
+            <strong>
+                We're sorry but hello-world doesn't work properly without JavaScript enabled. Please
+                enable it to continue.
+            </strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <script type="text/javascript" src="/wen/js/vendors-app.js"></script>
+        <script type="text/javascript" src="/wen/js/app.js"></script>
+    </body>
+</html>
